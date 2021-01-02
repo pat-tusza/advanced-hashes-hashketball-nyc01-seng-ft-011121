@@ -205,7 +205,11 @@ def big_shoe_rebounds
   robounds = 0
   game_hash.each do |location, team|
     team[:players].each do |stats|
-      binding.pry
+      if stats[:shoe] > big_shoes
+        big_shoes = stats[:shoe]
+        rebounds = stats[:rebound]
+      end
     end
   end
+  rebounds
 end
