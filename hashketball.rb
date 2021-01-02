@@ -201,4 +201,11 @@ def player_stats(player_name)
 end
 
 def big_shoe_rebounds
+  big_shoes = 0
+  robounds = 0
+  game_hash.each do |location, team|
+    team[:players].each do |stats|
+      binding.pry
+    end
+  end
 end
